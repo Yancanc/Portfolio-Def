@@ -29,7 +29,6 @@ O design do projeto é inspirado nas cores e na energia da Bahia, mesclando tons
 
 ## ⚙️ Funcionalidades
 
-- 🌓 Tema claro/escuro
 - 🎯 Animações interativas
 - 📱 Design responsivo
 - 🎨 Interface moderna
