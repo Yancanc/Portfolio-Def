@@ -160,7 +160,7 @@ export default function Hero() {
           className={styles.playgroundLine}
           style={{ color: currentTheme.colors.headingColor }}
         >
-          <span ref={playgroundRef}>playground</span>
+          <span ref={playgroundRef}>Playground</span>
           <span
             ref={sunIconRef}
             style={{ marginLeft: "8px", display: "inline-flex" }}
@@ -176,11 +176,8 @@ export default function Hero() {
               className={styles.ofText}
             >
               of
+              <div className={styles.circle}></div>
             </h1>
-            <div
-              className={styles.circle}
-              style={{ borderColor: currentTheme.colors.headingColor }}
-            ></div>
           </div>
           <div
             ref={bioTextRef}

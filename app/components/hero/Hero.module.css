@@ -64,6 +64,7 @@
   font-size: 8vh !important;
   line-height: 1;
   margin: 0;
+  position: relative;
 }
 
 .parenthesis {
@@ -90,6 +91,19 @@
   font-weight: 300;
   font-family: "Public Sans", sans-serif;
   max-width: 300px;
+}
+
+.circle {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border: 1px solid;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  pointer-events: none;
 }
 
 /* Tablet (Portrait) */
@@ -129,6 +143,8 @@
   }
 
   .dot {
+    position: relative;
+    bottom: 0.1em;
     font-size: 6rem !important;
   }
 
