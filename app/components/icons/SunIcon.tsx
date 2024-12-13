@@ -28,14 +28,14 @@ export default function SunIcon() {
       // Animação de rotação dos raios (360 graus)
       timeline.to(raysRef.current, {
         rotation: 360,
-        duration: 10,
+        duration: Infinity,
         ease: "none",
         transformOrigin: "center center",
       });
 
       // Animação de balanço do rosto (pendular)
       const animacaoRosto = gsap.to(faceRef.current, {
-        rotation: "10", // Rotação de 10 graus
+        rotation: "7", // Rotação de 7 graus
         duration: 1.5, // Duração de 1.5 segundos
         ease: "power1.inOut", // Easing suave
         yoyo: true, // Vai e volta
@@ -54,7 +54,7 @@ export default function SunIcon() {
         scaleY: 0.1, // Fecha os olhos (escala vertical)
         duration: 0.1, // Duração rápida
         repeat: -1, // Repetição infinita
-        repeatDelay: 3, // Espera 3 segundos entre piscadas
+        repeatDelay: 2, // Espera 2 segundos entre piscadas
         transformOrigin: "center",
         yoyo: true, // Abre e fecha
       });
