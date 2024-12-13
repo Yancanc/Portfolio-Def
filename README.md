@@ -42,7 +42,7 @@ bash
 
 ## Clone o repositório
 
-git clone https://github.com/seu-usuario/seu-portfolio.git
+git clone https://github.com/Yancanc/Portfolio-Def
 
 ## Entre na pasta do projeto
 
@@ -58,6 +58,7 @@ npm run dev
 
 ## 📁 Estrutura do Projeto
 
+```
 ├── app/
 │ ├── (theme)/
 │ │ └── hooks/
@@ -71,6 +72,7 @@ npm run dev
 │ └── assets/
 └── styles/
 └── globals.css
+```
 
 ## 📚 Documentação
 
