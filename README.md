@@ -104,7 +104,7 @@ O projeto utiliza GSAP para animações complexas:
 
 ## 📅 Versionamento
 
-- **v1.0.0** (12/01/2024)
+- **v1.0.0** (12/12/2024)
   - Lançamento inicial
   - Sistema de temas
   - Animações base
