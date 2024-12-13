@@ -1,0 +1,24 @@
+.page {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.content {
+  text-align: center;
+  max-width: 600px;
+}
+
+.content h1 {
+  color: var(--blue-900);
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+}
+
+.content p {
+  color: var(--blue-800);
+  font-size: 1.2rem;
+  line-height: 1.6;
+}

@@ -1,0 +1,326 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.content {
+  max-width: 90vw;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content h1 {
+  font-size: 8vh;
+  font-weight: 100;
+}
+
+.welcomeLine {
+  font-size: 12vh !important;
+  line-height: 1;
+  margin: 0;
+}
+
+.nameLine {
+  font-size: 12vh !important;
+  line-height: 1.2;
+}
+
+.playgroundLine {
+  font-size: 8vh !important;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0;
+}
+
+.ofContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.ofWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ofText {
+  font-size: 8vh !important;
+  line-height: 1;
+  margin: 0;
+}
+
+.parenthesis {
+  display: flex;
+  align-items: center;
+  font-size: 4rem;
+  position: relative;
+}
+
+.parenthesis::before {
+  content: "(";
+  position: absolute;
+  left: -0.5rem;
+}
+
+.parenthesis::after {
+  content: ")";
+  position: absolute;
+  right: -0.5rem;
+}
+
+.bioText {
+  font-size: 1rem;
+  font-weight: 300;
+  font-family: "Public Sans", sans-serif;
+  max-width: 300px;
+}
+
+/* Tablet (Portrait) */
+@media (max-width: 768px) {
+  .content {
+    gap: 0.75rem;
+  }
+
+  .content h1 {
+    font-size: 5vh;
+  }
+
+  .welcomeLine {
+    font-size: 7vh !important;
+  }
+
+  .nameLine {
+    font-size: 7vh !important;
+  }
+
+  .playgroundLine {
+    font-size: 5vh !important;
+  }
+
+  .bioText {
+    font-size: 0.9rem;
+    max-width: 220px;
+  }
+
+  .circle {
+    width: 60px;
+    height: 60px;
+  }
+
+  .parenthesis {
+    font-size: 3.5rem;
+  }
+
+  .dot {
+    font-size: 6rem !important;
+  }
+
+  .ofContainer {
+    gap: 1.5rem;
+  }
+}
+
+/* Mobile (Portrait) */
+@media (max-width: 480px) {
+  .hero {
+    padding: 1rem;
+    min-height: 100dvh;
+  }
+
+  .content {
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .content h1 {
+    font-size: 4vh;
+  }
+
+  .welcomeLine {
+    font-size: 5vh !important;
+  }
+
+  .nameLine {
+    font-size: 5vh !important;
+  }
+
+  .playgroundLine {
+    font-size: 3.5vh !important;
+    gap: 0.5rem;
+  }
+
+  .bioText {
+    font-size: 0.75rem;
+    max-width: 180px;
+    line-height: 1.3;
+    padding: 0 1rem;
+  }
+
+  .circle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .parenthesis {
+    font-size: 2.5rem;
+    white-space: nowrap;
+  }
+
+  .parenthesis::before {
+    .dot {
+      font-size: 4rem !important;
+    }
+
+    .ofContainer {
+      gap: 0.75rem;
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+
+    .ofText {
+      font-size: 5vh !important;
+    }
+
+    .bioText {
+      font-size: 0.75rem;
+      max-width: 180px;
+      line-height: 1.3;
+    }
+
+    .parenthesis {
+      font-size: 2.5rem;
+      white-space: nowrap;
+    }
+  }
+
+  /* Mobile (Landscape) */
+  @media (max-height: 480px) and (orientation: landscape) {
+    .hero {
+      padding: 1.5rem;
+      min-height: 120vh;
+    }
+
+    .content {
+      gap: 0.5rem;
+    }
+
+    .content h1 {
+      font-size: 4vh;
+    }
+
+    .welcomeLine {
+      font-size: 6vh !important;
+    }
+
+    .nameLine {
+      font-size: 6vh !important;
+    }
+
+    .playgroundLine {
+      font-size: 4vh !important;
+    }
+
+    .bioText {
+      font-size: 0.7rem;
+      max-width: 200px;
+    }
+
+    .circle {
+      width: 45px;
+      height: 45px;
+    }
+
+    .parenthesis {
+      font-size: 2.75rem;
+    }
+
+    .dot {
+      font-size: 4.5rem !important;
+    }
+
+    .ofContainer {
+      gap: 0.75rem;
+    }
+
+    .ofText {
+      font-size: 6vh !important;
+    }
+
+    .bioText {
+      font-size: 0.7rem;
+      max-width: 200px;
+    }
+
+    .parenthesis {
+      font-size: 2.75rem;
+    }
+  }
+
+  /* Tablets grandes e iPads */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .content {
+      gap: 1rem;
+    }
+
+    .content h1 {
+      font-size: 6vh;
+    }
+
+    .welcomeLine {
+      font-size: 8vh !important;
+    }
+
+    .nameLine {
+      font-size: 8vh !important;
+    }
+
+    .playgroundLine {
+      font-size: 6vh !important;
+    }
+
+    .bioText {
+      font-size: 0.85rem;
+      max-width: 240px;
+    }
+
+    .circle {
+      width: 55px;
+      height: 55px;
+    }
+
+    .parenthesis {
+      font-size: 3rem;
+    }
+
+    .dot {
+      font-size: 5.5rem !important;
+    }
+
+    .ofContainer {
+      gap: 1rem;
+    }
+
+    .ofText {
+      font-size: 7vh !important;
+    }
+
+    .bioText {
+      font-size: 0.85rem;
+      max-width: 240px;
+    }
+
+    .parenthesis {
+      font-size: 3rem;
+    }
+  }
+}
