@@ -19,7 +19,10 @@
   font-size: 8vh;
   font-weight: 100;
 }
-
+.hover-char {
+  display: inline-block;
+  cursor: pointer;
+}
 .welcomeLine {
   font-size: 12vh !important;
   line-height: 1;
@@ -38,6 +41,10 @@
   align-items: center;
   gap: 1rem;
   margin: 0;
+}
+
+.playgroundLine span {
+  display: inline-block;
 }
 
 .ofContainer {
@@ -323,4 +330,9 @@
       font-size: 3rem;
     }
   }
+}
+
+:global(.hover-char) {
+  display: inline-block;
+  margin-right: -0.05em;
 }

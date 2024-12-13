@@ -19,28 +19,32 @@ export default function SunIcon() {
 
   useEffect(() => {
     if (raysRef.current && faceRef.current && svgRef.current) {
+      const svg = svgRef.current;
+
       // Cria timeline principal para animação contínua dos raios
       const timeline = gsap.timeline({
-        repeat: -1, // Repetição infinita
+        repeat: -1,
+        paused: false,
       });
       timelineRef.current = timeline;
 
-      // Animação de rotação dos raios (360 graus)
+      // Animação de rotação dos raios
       timeline.to(raysRef.current, {
-        rotation: 360,
-        duration: Infinity,
+        rotation: "+=360", // Rotação relativa
+        duration: 10,
         ease: "none",
         transformOrigin: "center center",
+        immediateRender: false,
       });
 
       // Animação de balanço do rosto (pendular)
       const animacaoRosto = gsap.to(faceRef.current, {
-        rotation: "7", // Rotação de 7 graus
-        duration: 1.5, // Duração de 1.5 segundos
-        ease: "power1.inOut", // Easing suave
-        yoyo: true, // Vai e volta
-        repeat: -1, // Repetição infinita
-        transformOrigin: "38px 38px", // Ponto de origem da rotação
+        rotation: "7",
+        duration: 1.5,
+        ease: "power1.inOut",
+        yoyo: true,
+        repeat: -1,
+        transformOrigin: "38px 38px",
       });
 
       // Seleção dos elementos do rosto
@@ -64,7 +68,6 @@ export default function SunIcon() {
 
       // Handler para quando o mouse entra no SVG
       const handleMouseEnter = () => {
-        // Pausa todas as animações em andamento
         timeline.pause();
         animacaoRosto.pause();
         animacaoOlhos.pause();
@@ -116,19 +119,18 @@ export default function SunIcon() {
         });
       };
 
-      // Adiciona os event listeners de mouse
-      svgRef.current.addEventListener("mouseenter", handleMouseEnter);
-      svgRef.current.addEventListener("mouseleave", handleMouseLeave);
+      // Adiciona os event listeners de mouse usando a referência capturada
+      svg.addEventListener("mouseenter", handleMouseEnter);
+      svg.addEventListener("mouseleave", handleMouseLeave);
 
       // Cleanup: remove animações e event listeners quando componente é desmontado
       return () => {
         timeline.kill();
         animacaoRosto.kill();
         animacaoOlhos.kill();
-        if (svgRef.current) {
-          svgRef.current.removeEventListener("mouseenter", handleMouseEnter);
-          svgRef.current.removeEventListener("mouseleave", handleMouseLeave);
-        }
+        // Usa a referência capturada no cleanup
+        svg.removeEventListener("mouseenter", handleMouseEnter);
+        svg.removeEventListener("mouseleave", handleMouseLeave);
       };
     }
   }, []); // Array vazio significa que o efeito só roda uma vez na montagem
