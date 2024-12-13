@@ -3,7 +3,6 @@
 import { useTheme } from "@/app/(theme)/hooks/useTheme";
 import styles from "./Hero.module.css";
 import SunIcon from "../icons/SunIcon";
-import Image from "next/image";
 
 export default function Hero() {
   const { currentTheme } = useTheme();
