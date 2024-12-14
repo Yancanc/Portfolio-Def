@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useEffect } from "react";
-import { useTheme } from "../hooks/useTheme";
+import { useTheme } from "@/app/hooks/useTheme";
 import styles from "./BackgroundGradient.module.css";
 import gsap from "gsap";
 

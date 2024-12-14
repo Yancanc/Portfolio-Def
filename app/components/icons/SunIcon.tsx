@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { useTheme } from "@/app/(theme)/hooks/useTheme";
+import { useTheme } from "@/app/hooks/useTheme";
 import gsap from "gsap";
 
 export default function SunIcon() {

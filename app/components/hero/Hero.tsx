@@ -1,6 +1,6 @@
 "use client";
 
-import { useTheme } from "@/app/(theme)/hooks/useTheme";
+import { useTheme } from "@/app/hooks/useTheme";
 import styles from "./Hero.module.css";
 import SunIcon from "../icons/SunIcon";
 import { useEffect, useRef } from "react";
@@ -143,6 +143,7 @@ export default function Hero() {
 
   return (
     <section
+      id="hero"
       className={styles.hero}
       style={{ color: currentTheme.colors.textColor }}
     >

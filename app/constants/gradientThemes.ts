@@ -5,6 +5,8 @@ export const gradientThemes = [
       textColor: "var(--red-50)",
       linkColor: "var(--red-600)",
       headingColor: "var(--red-50)",
+      primary: "var(--blue-base)",
+      secondary: "var(--red-base)",
     },
   },
   {
@@ -13,6 +15,8 @@ export const gradientThemes = [
       textColor: "var(--green-50)",
       linkColor: "var(--green-600)",
       headingColor: "var(--green-50)",
+      primary: "var(--blue-base)",
+      secondary: "var(--green-base)",
     },
   },
   {
@@ -21,6 +25,8 @@ export const gradientThemes = [
       textColor: "var(--yellow-50)",
       linkColor: "var(--yellow-600)",
       headingColor: "var(--yellow-50)",
+      primary: "var(--blue-base)",
+      secondary: "var(--yellow-base)",
     },
   },
   {
@@ -29,6 +35,8 @@ export const gradientThemes = [
       textColor: "var(--yellow-50)",
       linkColor: "var(--yellow-600)",
       headingColor: "var(--yellow-50)",
+      primary: "var(--yellow-base)",
+      secondary: "var(--green-base)",
     },
   },
   {
@@ -37,6 +45,8 @@ export const gradientThemes = [
       textColor: "var(--red-50)",
       linkColor: "var(--yellow-600)",
       headingColor: "var(--red-50)",
+      primary: "var(--red-base)",
+      secondary: "var(--yellow-base)",
     },
   },
 ];
@@ -45,6 +55,8 @@ export type ThemeColors = {
   textColor: string;
   linkColor: string;
   headingColor: string;
+  primary: string;
+  secondary: string;
 };
 
 export type GradientTheme = {
