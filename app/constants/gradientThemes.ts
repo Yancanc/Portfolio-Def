@@ -50,16 +50,3 @@ export const gradientThemes = [
     },
   },
 ];
-
-export type ThemeColors = {
-  textColor: string;
-  linkColor: string;
-  headingColor: string;
-  primary: string;
-  secondary: string;
-};
-
-export type GradientTheme = {
-  gradient: string;
-  colors: ThemeColors;
-};

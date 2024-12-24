@@ -1,30 +1,30 @@
 "use client";
 
 import { useTheme } from "@/app/hooks/useTheme";
-import styles from "./Hero.module.css";
-import SunIcon from "../icons/SunIcon";
+import styles from "../styles/hero/Hero.module.css";
+import SunIcon from "../components/svgs/SunIcon";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import SplitType from "split-type";
+import { HeroRefs } from "@/app/types/hero";
 
 export default function Hero() {
   const { currentTheme } = useTheme();
-
-  /**
-   * Refs para controlar as animações dos elementos
-   * welcomeRef: texto "Welcome to the"
-   * playgroundRef: texto "playground"
-   * ofTextRef: texto "of"
-   * bioTextRef: texto da bio
-   * nameRef: texto "Yan."
-   * sunIconRef: ícone do sol
-   */
-  const welcomeRef = useRef(null);
-  const playgroundRef = useRef(null);
-  const ofTextRef = useRef(null);
-  const bioTextRef = useRef(null);
-  const nameRef = useRef(null);
-  const sunIconRef = useRef(null);
+  const {
+    welcomeRef,
+    playgroundRef,
+    ofTextRef,
+    bioTextRef,
+    nameRef,
+    sunIconRef,
+  }: HeroRefs = {
+    welcomeRef: useRef(null),
+    playgroundRef: useRef(null),
+    ofTextRef: useRef(null),
+    bioTextRef: useRef(null),
+    nameRef: useRef(null),
+    sunIconRef: useRef(null),
+  };
 
   useEffect(() => {
     const tl = gsap.timeline();

@@ -3,19 +3,21 @@
 import { useEffect, useRef } from "react";
 import { useTheme } from "@/app/hooks/useTheme";
 import gsap from "gsap";
+import { SVGRefs, AnimationRefs } from "@/app/types/svg";
 
 export default function SunIcon() {
   const { currentTheme } = useTheme();
+  const { svgRef, circleRef, raysRef, faceRef }: SVGRefs = {
+    svgRef: useRef<SVGSVGElement>(null),
+    circleRef: useRef<SVGCircleElement>(null),
+    raysRef: useRef<SVGGElement>(null),
+    faceRef: useRef<SVGGElement>(null),
+  };
 
-  // Refs para manipular elementos SVG
-  const svgRef = useRef<SVGSVGElement>(null); // Ref do SVG principal
-  const circleRef = useRef<SVGCircleElement>(null); // Ref do círculo central
-  const raysRef = useRef<SVGGElement>(null); // Ref do grupo de raios
-  const faceRef = useRef<SVGGElement>(null); // Ref do grupo do rosto
-
-  // Refs para controlar animações
-  const timelineRef = useRef<gsap.core.Timeline | null>(null); // Timeline principal
-  const animacoesRef = useRef<gsap.core.Tween[]>([]); // Array de animações
+  const { timelineRef, animacoesRef }: AnimationRefs = {
+    timelineRef: useRef<gsap.core.Timeline | null>(null),
+    animacoesRef: useRef<gsap.core.Tween[]>([]),
+  };
 
   useEffect(() => {
     if (raysRef.current && faceRef.current && svgRef.current) {

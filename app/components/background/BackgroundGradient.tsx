@@ -2,7 +2,7 @@
 
 import { useRef, useEffect } from "react";
 import { useTheme } from "@/app/hooks/useTheme";
-import styles from "./BackgroundGradient.module.css";
+import styles from "../../styles/components/BackgroundGradient.module.css";
 import gsap from "gsap";
 
 export default function BackgroundGradient() {

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useTheme } from "../../hooks/useTheme";
-import styles from "./ProgressBar.module.css";
+import styles from "../../styles/components/ProgressBar.module.css";
 
 export default function ProgressBar() {
   const [progress, setProgress] = useState(0);

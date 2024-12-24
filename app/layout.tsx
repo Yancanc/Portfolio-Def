@@ -8,6 +8,7 @@ import MenuOverlay from "./components/menu/MenuOverlay";
 import { useState } from "react";
 import "./styles/globals.css";
 import ProgressBar from "./components/progressBar/ProgressBar";
+import { RootLayoutProps, ThemeProviderProps } from "@/app/types/layout";
 
 export default function RootLayout({
   children,

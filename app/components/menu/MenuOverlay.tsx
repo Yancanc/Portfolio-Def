@@ -2,18 +2,17 @@
 
 import { useTheme } from "@/app/hooks/useTheme";
 import { useEffect, useRef, useState } from "react";
-import styles from "./MenuOverlay.module.css";
+import styles from "../../styles/components/MenuOverlay.module.css";
 import gsap from "gsap";
 import HamburgerButton from "./HamburgerButton";
-import WobleIcon from "../icons/WobleIcon";
+import WobleIcon from "../svgs/WobleIcon";
+import {
+  MenuOverlayProps,
+  HamburgerButtonProps,
+  MenuItem,
+} from "@/app/types/menu";
 
-export default function MenuOverlay({
-  isOpen,
-  onClose,
-}: {
-  isOpen: boolean;
-  onClose: () => void;
-}) {
+export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
   const { currentTheme } = useTheme();
   const menuItemsRef = useRef<HTMLElement[]>([]);
   const [isHovering, setIsHovering] = useState(false);
@@ -87,7 +86,7 @@ export default function MenuOverlay({
     };
   }, [isOpen, currentTheme]);
 
-  const menuItems = [
+  const menuItems: MenuItem[] = [
     { title: "Home", href: "#hero" },
     { title: "More About Yan", href: "#about" },
     { title: "My Projects", href: "#projects" },

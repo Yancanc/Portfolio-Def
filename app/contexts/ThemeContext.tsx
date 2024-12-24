@@ -1,11 +1,7 @@
 "use client";
 import { createContext, useState, useEffect } from "react";
-import { gradientThemes, GradientTheme } from "../constants/gradientThemes";
-
-type ThemeContextType = {
-  currentTheme: GradientTheme;
-  changeTheme?: () => void;
-};
+import { gradientThemes } from "../constants/gradientThemes";
+import { GradientTheme, ThemeContextType } from "@/app/types/theme";
 
 const defaultTheme = gradientThemes[0];
 const THEME_STORAGE_KEY = "current-theme";

@@ -2,19 +2,19 @@
 
 import { useTheme } from "@/app/hooks/useTheme";
 import { useEffect, useRef } from "react";
-import styles from "./HamburgerButton.module.css";
+import styles from "../../styles/components/HamburgerButton.module.css";
 import gsap from "gsap";
+import { HamburgerButtonProps, ButtonRefs } from "@/app/types/button";
 
 export default function HamburgerButton({
   onClick,
   isOpen,
-}: {
-  onClick: () => void;
-  isOpen: boolean;
-}) {
+}: HamburgerButtonProps) {
   const { currentTheme } = useTheme();
-  const linesRef = useRef<HTMLSpanElement[]>([]);
-  const buttonRef = useRef<HTMLButtonElement>(null);
+  const { buttonRef, linesRef }: ButtonRefs = {
+    buttonRef: useRef<HTMLButtonElement>(null),
+    linesRef: useRef<HTMLDivElement[]>([]),
+  };
 
   const addToRefs = (el: HTMLSpanElement | null): void => {
     if (el && !linesRef.current.includes(el)) {

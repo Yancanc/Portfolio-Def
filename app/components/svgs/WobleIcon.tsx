@@ -3,10 +3,7 @@
 import { useEffect, useRef } from "react";
 import { useTheme } from "@/app/hooks/useTheme";
 import anime from "animejs";
-
-interface WobleIconProps {
-  triggerAnimation?: boolean;
-}
+import { WobleIconProps, Point, AnimationConfig } from "@/app/types/woble";
 
 export default function WobleIcon({ triggerAnimation }: WobleIconProps) {
   const { currentTheme } = useTheme();
