@@ -1,0 +1,109 @@
+.container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  min-height: 100vh; /* Ocupa toda a altura da viewport */
+}
+
+.aboutSection {
+  position: relative;
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
+  min-height: 400px;
+  padding: 2rem;
+}
+
+.content {
+  opacity: 0; /* O conteúdo real fica invisível, servindo apenas para referência */
+}
+
+/* Corrigindo os seletores para usar classes locais */
+.title {
+  width: 100%;
+  font-size: 4rem;
+  text-align: center;
+}
+
+.text {
+  font-family: "Public Sans", sans-serif;
+  font-size: 2.5rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+/* Estilo específico para o texto "GARFIELD" */
+.highlight {
+  font-weight: bold;
+  display: inline-block;
+}
+
+/* Adicione uma transição suave ao hover se desejar */
+.aboutSection:hover {
+  transform: scale(1.01);
+  transition: transform 0.3s ease;
+}
+
+.teste {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
+  z-index: 1;
+}
+
+.gradientText {
+  opacity: 0;
+}
+
+.svgText {
+  width: 100%;
+  height: auto;
+}
+
+.letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+.gradientText::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  mix-blend-mode: difference;
+}
+
+.gradientText::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: white;
+  mix-blend-mode: difference;
+  z-index: -1;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.interactiveCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 2;
+  pointer-events: all;
+  background: transparent;
+}
